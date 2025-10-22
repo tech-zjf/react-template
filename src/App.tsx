@@ -34,7 +34,6 @@ function App() {
                 back
             </button>
             <Outlet />
-            {/* <PWAUpdatePrompt /> */}
         </>
     );
 }
