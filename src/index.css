@@ -1,16 +1,46 @@
-:root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+/* 移动端 H5 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* rem 基准值将由 JavaScript 动态设置 */
+    font-size: 100px; /* 默认值，会被 JS 覆盖 */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        'Helvetica Neue',
+        Helvetica,
+        Segoe UI,
+        Arial,
+        Roboto,
+        'PingFang SC',
+        'miui',
+        'Hiragino Sans GB',
+        'Microsoft Yahei',
+        sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    color: #333;
+    background-color: #f5f5f5;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
+    /* 移动端优化 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 100vh;
 }
 
 a {
