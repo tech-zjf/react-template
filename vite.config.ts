@@ -8,17 +8,23 @@ export default defineConfig({
         react(),
         VitePWA({
             registerType: 'autoUpdate',
-            workbox: {
-                globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+            strategies: 'injectManifest',
+            srcDir: 'src',
+            filename: 'sw.ts',
+            injectManifest: {
+                maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+                globIgnores: ['index.html'],
             },
-            includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+            includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg', 'pwa-192x192.svg', 'pwa-512x512.svg'],
             manifest: {
+                lang: 'zh-CN',
                 name: 'PWA H5 应用',
                 short_name: 'PWA H5',
                 description: '基于 React 的 PWA H5 应用',
                 theme_color: '#ffffff',
                 background_color: '#ffffff',
                 display: 'standalone',
+                display_override: ['standalone', 'browser'],
                 scope: '/',
                 start_url: '/',
                 orientation: 'portrait',
@@ -40,6 +46,9 @@ export default defineConfig({
                         purpose: 'any maskable',
                     },
                 ],
+            },
+            devOptions: {
+                enabled: true,
             },
         }),
     ],

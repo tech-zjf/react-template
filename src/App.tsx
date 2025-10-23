@@ -8,6 +8,7 @@ function App() {
         <>
             <div>
                 <p className="text">这是一段测试文本啊</p>
+                <img src="https://upload.42how.com/article/PBDk4S__1686554357384.jpeg?x-oss-process=image/resize,w_400/format,webp" alt="" />
             </div>
             <button
                 className="text"
