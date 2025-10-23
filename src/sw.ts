@@ -54,6 +54,7 @@ registerRoute(
         ],
     }),
 );
+
 registerRoute(
     ({ request }) => request.mode === 'navigate',
     new NetworkFirst({
