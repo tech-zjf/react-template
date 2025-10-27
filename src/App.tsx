@@ -7,12 +7,13 @@ import { useNavigate } from 'react-router';
 
 function App() {
     const [count, setCount] = useState(0);
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     return (
         <>
             <div className="flex justify-center gap-8 my-4 align-center">
                 <a href="https://vite.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
+
                 </a>
                 <a href="https://react.dev" target="_blank">
                     <img src={reactLogo} className="logo react" alt="React logo" />
@@ -28,7 +29,7 @@ function App() {
             <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
             <div className="flex gap-2 justify-center mt-4">
                 <button
-                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                    className="bg-green-500  hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                     onClick={() => {
                         navigate('/test1');
                     }}
