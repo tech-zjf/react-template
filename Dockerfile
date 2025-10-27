@@ -6,8 +6,14 @@ FROM node:22-alpine AS builder
 # 设置工作目录
 WORKDIR /app
 
+# 配置 npm 镜像源（使用淘宝镜像加速）
+RUN npm config set registry https://registry.npmmirror.com
+
 # 安装 pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# 配置 pnpm 镜像源
+RUN pnpm config set registry https://registry.npmmirror.com
 
 # 复制 package.json 和 pnpm-lock.yaml
 COPY package.json pnpm-lock.yaml ./

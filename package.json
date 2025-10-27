@@ -13,11 +13,11 @@
         "format:check": "prettier --check .",
         "preview": "vite preview",
         "prepare": "husky install",
-        "deploy:update": "ssh root@120.53.103.183 'cd /root/apps/react-template && git pull'",
-        "deploy:build": "ssh root@120.53.103.183 'cd /root/apps/react-template && docker compose up -d --build'",
-        "deploy:logs": "ssh root@120.53.103.183 'cd /root/apps/react-template && docker compose logs -f'",
-        "deploy:stop": "ssh root@120.53.103.183 'cd /root/apps/react-template && docker compose down'",
-        "deploy:restart": "ssh root@120.53.103.183 'cd /root/apps/react-template && docker compose restart'",
+        "deploy:update": "ssh root@120.53.103.183 \"cd /root/apps/react-template && git pull\"",
+        "deploy:build": "ssh root@120.53.103.183 \"cd /root/apps/react-template && docker compose up -d --build\"",
+        "deploy:logs": "ssh root@120.53.103.183 \"cd /root/apps/react-template && docker compose logs -f\"",
+        "deploy:stop": "ssh root@120.53.103.183 \"cd /root/apps/react-template && docker compose down\"",
+        "deploy:restart": "ssh root@120.53.103.183 \"cd /root/apps/react-template && docker compose restart\"",
         "deploy": "pnpm run deploy:update && pnpm run deploy:build"
     },
     "lint-staged": {
