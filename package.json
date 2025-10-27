@@ -50,6 +50,7 @@
         "autoprefixer": "^10.4.21",
         "chalk": "^4.1.1",
         "cross-env": "^7.0.3",
+        "esbuild": "^0.24.0",
         "eslint": "^8",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.2.1",
