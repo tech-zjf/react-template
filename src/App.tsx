@@ -1,9 +1,8 @@
 import { useState } from 'react';
+import { Outlet, useNavigate } from 'react-router';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import { Outlet } from 'react-router';
-import { useNavigate } from 'react-router';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -30,26 +29,20 @@ function App() {
             <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
             <div className="flex gap-2 justify-center mt-4">
                 <button
-                    className="bg-green-500  hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => {
-                        navigate('/test1');
-                    }}
+                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => navigate('/test1')}
                 >
                     to test1
                 </button>
                 <button
                     className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => {
-                        navigate('/test2');
-                    }}
+                    onClick={() => navigate('/test2')}
                 >
                     to test2
                 </button>
                 <button
                     className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => {
-                        navigate(-1);
-                    }}
+                    onClick={() => navigate(-1)}
                 >
                     back
                 </button>
